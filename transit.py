@@ -15,6 +15,7 @@ fig.set_size_inches(10, 10)
 ax=plt.axes(xlim=(-5, 5), ylim=(-4, 4))
 plt.xlabel('distance en UA')
 plt.ylabel('distance en UA')
+title(u"observation d'une etoile evant laquelle passe une exoplanete", fontsize=10) 
 patch = plt.Circle((0,3), 0.15, fc='b', label="Exoplanete") 
 
 a= plt.Circle((0, 0), 2, fc='y', label="etoile")
