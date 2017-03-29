@@ -13,12 +13,18 @@ fig= plt.figure()
 fig.set_dpi(100) 
 fig.set_size_inches(100, 100) 
 ax=plt.axes(xlim=(-0.06, 0.06), ylim=(-0.06, 0.06))
+plt.xlabel('distance en UA')
+plt.ylabel('distance en UA')
+
 patch = plt.Circle((5,-5), 0.005, fc='b', label="HD 209458 b") 
 patch2 = plt.Circle((0, -2), 0.001, fc='r', label="centre de masse") 
 a=plt.Circle((0, -2),0.05, color="green",label=' centre de HD 209458')
+plt.annotate('masse en masse de Jupiter', xy=(0, 0), xytext=(0.003, -0.04))
+
 m=0.69
 M=102
 R=0.04747
+
 def init(): 
      patch.center = (0, 0) 
      patch2.center = (0, 0) 
