@@ -20,6 +20,9 @@ patch = plt.Circle((0,3), 0.15, fc='b', label="Exoplanete")
 a= plt.Circle((0, 0), 2, fc='y', label="etoile")
 
 R=4
+#coordonnées du centre de l'orbite de l'exoplanete
+xcoord=-3
+ycoord=3
 def init(): 
      patch.center = (-3, 3) 
      
@@ -33,8 +36,8 @@ def init():
  
 def animate(t): 
      x,y = patch.center 
-     x = R* np.cos(np.radians(t)) -3
-     y =-R* np.sin(np.radians(t)) +3
+     x = R* np.cos(np.radians(t))+xcoord
+     y =-R* np.sin(np.radians(t)) +ycoord
      patch.center = (x,y) 
      
       
