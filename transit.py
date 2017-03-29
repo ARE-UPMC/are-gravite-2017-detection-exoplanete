@@ -16,10 +16,10 @@ ax=plt.axes(xlim=(-5, 5), ylim=(-4, 4))
 plt.xlabel('distance en UA')
 plt.ylabel('distance en UA')
 title(u"observation d'une etoile evant laquelle passe une exoplanete", fontsize=10) 
-patch = plt.Circle((0,3), 0.15, fc='b', label="Exoplanete") 
+patch = plt.Circle((0,3), 0.15) 
 
-a= plt.Circle((0, 0), 2, fc='y', label="etoile")
-
+a= plt.Circle((0, 0), 2)
+plt.annotate('masse en masse de Jupiter', xy=(0, 0), xytext=(0.3, -3)),
 R=4
 #coordonnées du centre de l'orbite de l'exoplanete
 xcoord=-3
@@ -46,5 +46,5 @@ def animate(t):
      
 anim = animation.FuncAnimation(fig, animate, init_func=init,frames=360,interval=20,blit=True)
 
-plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=1, ncol=2, mode="expand", borderaxespad=0, handles=[a, patch]) 
+
 plt.show()
